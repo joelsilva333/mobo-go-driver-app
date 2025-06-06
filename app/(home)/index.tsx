@@ -29,7 +29,8 @@ export default function HomeScreen() {
     <View style={style.container}>
       <TicketReceived />
 
-      {/* <View style={style.cardsContainer}>
+      {/* 
+      <View style={style.cardsContainer}>
         {cardItems.map((item, index) => (
           <TouchableOpacity
             key={index}
@@ -39,7 +40,8 @@ export default function HomeScreen() {
             <Text style={style.cardTitle}>{item.title}</Text>
           </TouchableOpacity>
         ))}
-      </View> */}
+      </View> 
+      */}
     </View>
   );
 }
