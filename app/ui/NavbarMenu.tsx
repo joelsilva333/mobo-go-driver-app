@@ -1,9 +1,9 @@
 import { useRouter } from "expo-router";
 import {
-  ArrowLeftRight,
+  History,
   HomeIcon,
+  QrCode,
   ScanQrCode,
-  Ticket,
   Wallet,
 } from "lucide-react-native";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
@@ -30,14 +30,14 @@ export default function NavbarMenu() {
     },
     {
       icon: (
-        <ArrowLeftRight
+        <QrCode
           width={32}
           height={32}
           color="#fff"
         />
       ),
-      title: "Transfer",
-      link: "/transfer-methods",
+      title: "QR Receipt",
+      link: "/qr-generator",
     },
     {
       icon: (
@@ -48,19 +48,19 @@ export default function NavbarMenu() {
         />
       ),
       title: "Scan QR Code",
-      link: "/qr-payment",
+      link: "/qr-receipt",
       isMain: true,
     },
     {
       icon: (
-        <Ticket
+        <History
           width={32}
           height={32}
           color="#fff"
         />
       ),
-      title: "Tickets",
-      link: "/tickets",
+      title: "History",
+      link: "/history",
     },
     {
       icon: (

@@ -1,35 +1,35 @@
-import { StyleSheet, View } from "react-native";
+import { router } from "expo-router";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import TicketReceived from "../ui/TicketsReceivedCard";
 
 export default function HomeScreen() {
-  /*   const cardItems = [
+  const cardItems = [
     {
-      title: "Pagar Táxi",
-      icon: <Image source={require("@/assets/icons/taxi.png")} />,
-      link: "/payment-methods",
-    },
-    {
-      title: "Passagens",
-      icon: <Image source={require("@/assets/icons/tickets.png")} />,
-      link: "/tickets",
+      title: "Receber Pagamento",
+      icon: <Image source={require("../../assets/icons/qr-to-receive.png")} />,
+      link: "/qr-generator",
     },
     {
       title: "Carteira",
-      icon: <Image source={require("@/assets/icons/wallet.png")} />,
+      icon: <Image source={require("../../assets/icons/wallet-linear.png")} />,
       link: "/wallet",
     },
     {
+      title: "Ler QR e Receber",
+      icon: <Image source={require("../../assets/icons/qr-scan.png")} />,
+      link: "/qr-receipt",
+    },
+    {
       title: "Histórico",
-      icon: <Image source={require("@/assets/icons/history.png")} />,
+      icon: <Image source={require("../../assets/icons/history.png")} />,
       link: "/history",
     },
   ];
- */
+
   return (
     <View style={style.container}>
       <TicketReceived />
 
-      {/* 
       <View style={style.cardsContainer}>
         {cardItems.map((item, index) => (
           <TouchableOpacity
@@ -40,8 +40,7 @@ export default function HomeScreen() {
             <Text style={style.cardTitle}>{item.title}</Text>
           </TouchableOpacity>
         ))}
-      </View> 
-      */}
+      </View>
     </View>
   );
 }
@@ -65,7 +64,7 @@ const style = StyleSheet.create({
     backgroundColor: "#fff",
     gap: 6,
     padding: 8,
-    color: "#0D99FF",
+    color: "#0022FF",
     borderRadius: 12,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -78,6 +77,6 @@ const style = StyleSheet.create({
   cardTitle: {
     fontSize: 15,
     fontWeight: 600,
-    color: "#0D99FF",
+    color: "#0022FF",
   },
 });
